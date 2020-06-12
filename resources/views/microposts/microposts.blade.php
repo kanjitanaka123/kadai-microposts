@@ -13,6 +13,9 @@
                     <div>
                         {{-- 投稿内容 --}}
                         <p class="mb-0">{!! nl2br(e($micropost->content)) !!}</p>
+                        {{-- フォロー／アンフォローボタン --}}
+                        @include('user_follow.button')
+                        
                     </div>
                     <div>
                         @if (Auth::id() == $micropost->user_id)
